@@ -46,7 +46,7 @@ function PopulateDropdownList(url){
 // Gets all requested data from Backend, based on station and startdate
 function GetAPI(url){
     document.getElementById("WeatherInfo").innerHTML = "";
-    document.getElementById('InputMeetstation').value != "" ? fetch(url).then(response => { 
+    document.getElementById('InputMeetstation').value != "" && document.getElementById('InputStartdate').value != "" ? fetch(url).then(response => { 
         response.json().then(data => {
             data.Stations.forEach(station => {
                 PopulateWeatherData(station);
