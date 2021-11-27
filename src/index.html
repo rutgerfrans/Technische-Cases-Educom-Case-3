@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <body>
+        <h1>Technische-Cases-Educom-Case-1</h1>
+        <h2>Meetstation</h2>
+        <label><input id="InputMeetstation" list="DropDown" type="text" value=""></label>
+        <label><input id="InputStartdate" type="date" value=""></label>
+        <datalist id="DropDown"></datalist>
+        <button id="zoekButton" onclick="GetAPI('http://localhost:4001/weatherstation/' + getElementById('InputMeetstation').value + '/' + getElementById('InputStartdate').value)">Zoek / ↻</button>
+        <button id="GraphBurron" onclick="PopulateWeatherGraph()">Graph</button>
+        <div id="WeatherInfo"></div>
+        <canvas id="myChart" width="800" height="400"></canvas>
+    </body>
+    <script src="/script.js"></script>
+</html>
